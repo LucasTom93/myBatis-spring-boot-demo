@@ -1,5 +1,6 @@
 package com.lukasz.mybatisspringbootdemo;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 class MybatisSpringBootDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisSpringBootDemoApplication.class, args);
+        var springApplication = new SpringApplication(MybatisSpringBootDemoApplication.class);
+        springApplication.setBannerMode(Banner.Mode.OFF);
+        springApplication.run(args);
     }
-
 }
