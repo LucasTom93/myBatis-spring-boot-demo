@@ -1,2 +1,2 @@
 # myBatis-spring-boot-demo
-Demo of myBatis library
+Demo of myBatis framework
