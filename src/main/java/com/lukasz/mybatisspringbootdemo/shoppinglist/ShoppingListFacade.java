@@ -2,17 +2,14 @@ package com.lukasz.mybatisspringbootdemo.shoppinglist;
 
 import java.util.Set;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class ShoppingListFacade {
 
-    private final SoppingListQueryRepository soppingListQueryRepository;
-    private final ShoppingListCommandRepository shoppingListCommandRepository;
+    private final QueryRepository soppingListQueryRepository;
+    private final CommandRepository shoppingListCommandRepository;
 
-    public ShoppingListFacade(SoppingListQueryRepository soppingListQueryRepository, ShoppingListCommandRepository shoppingListCommandRepository) {
-        this.soppingListQueryRepository = soppingListQueryRepository;
-        this.shoppingListCommandRepository = shoppingListCommandRepository;
+    public ShoppingListFacade(QueryRepository queryRepository, CommandRepository commandRepository) {
+        this.soppingListQueryRepository = queryRepository;
+        this.shoppingListCommandRepository = commandRepository;
     }
 
     public Set<ShoppingListItemViewDto> getAllShoppingListItems() {
