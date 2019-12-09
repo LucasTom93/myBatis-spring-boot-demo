@@ -4,19 +4,19 @@ import java.util.Set;
 
 public class ShoppingListFacade {
 
-    private final QueryRepository soppingListQueryRepository;
-    private final CommandRepository shoppingListCommandRepository;
+    private final QueryRepository queryRepository;
+    private final CommandRepository commandRepository;
 
     public ShoppingListFacade(QueryRepository queryRepository, CommandRepository commandRepository) {
-        this.soppingListQueryRepository = queryRepository;
-        this.shoppingListCommandRepository = commandRepository;
+        this.queryRepository = queryRepository;
+        this.commandRepository = commandRepository;
     }
 
     public Set<ShoppingListItemViewDto> getAllShoppingListItems() {
-        return soppingListQueryRepository.findAll();
+        return queryRepository.findAll();
     }
 
     public void createItem(String itemName, String itemDescription, int amount) {
-        shoppingListCommandRepository.create(itemName, itemDescription, amount);
+        commandRepository.create(itemName, itemDescription, amount);
     }
 }
