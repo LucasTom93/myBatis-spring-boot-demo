@@ -4,9 +4,11 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Mapper
 @Repository
+@Transactional
 interface ShoppingListCommandRepository extends CommandRepository {
 
     @Override
