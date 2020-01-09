@@ -17,6 +17,9 @@
     <properties>
         <java.version>11</java.version>
         <mybatis.spring.version>2.1.1</mybatis.spring.version>
+        <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
+        <springfox-swagger-ui.version>${springfox-swagger2.version}</springfox-swagger-ui.version>
+        <jaxb-api.version>2.1</jaxb-api.version>
     </properties>
 
     <dependencies>
@@ -35,6 +38,24 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger-ui.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb-api.version}</version>
         </dependency>
 
         <dependency>
